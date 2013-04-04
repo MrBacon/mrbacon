@@ -1,0 +1,254 @@
+<!doctype html>
+
+
+
+  
+  
+  
+  
+
+
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang=en><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie" lang=en><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie" lang=en><![endif]-->
+
+<!--[if gt IE 8]><!--> <html class=no-js lang=en> <!--<![endif]-->
+
+<!-- Mirrored from videojs.com/tag-builder/ by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 31 Mar 2013 02:15:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset=utf-8>
+
+  
+    <title>HTML5 Video Tag Builder &mdash; Video.JS &raquo; HTML5 Video Player</title>
+  
+
+  <meta name=description content="Automatic HTML5 video tag builder for the Video.js embed code.">
+  <meta name=author content="Steve Heffernan and Zencoder, Inc.">
+
+  
+  
+
+  
+
+  
+  
+  <link rel=stylesheet href='../css/5e38da2.css'>
+  <link rel=stylesheet href="../css/tag-builder.css">
+  
+
+  
+  
+
+  
+    <link rel=stylesheet href="../../vjs.zencdn.net/3.2/video-js.css" type="text/css">
+    <script src="../../vjs.zencdn.net/3.2/video.js"></script>
+  
+  <link rel=stylesheet href="../../www2.videojs.com/css/tube-css/tube.css">
+  
+
+  <link rel=alternate type="application/rss+xml" title=RSS href="http://feeds.feedburner.com/video-js">
+
+  
+
+  
+  <script src="../../www1.videojs.com/js/libs/modernizr-2.0.6.min.js"></script>
+
+  
+  
+
+</head>
+
+<body id=tag_builder class="">
+
+    <header id=site_header>
+      <div class="container clearfix">
+
+        <a href="../index.html" id=logo><img src="../../www2.videojs.com/img/video-js-html5-video-player.png"></a>
+        <nav>
+          <a href="../index.html#section5" id=nav_setup>Setup</a>
+          <a href="index.html">Customize</a>
+          <a href="http://github.com/zencoder/video-js">Source Code</a>
+          <a href="../docs/index.html">Docs</a>
+          <a href="../../stackoverflow.com/questions/tagged/video.html" target=_blank>Help &raquo;</a>
+        </nav>
+
+      </div>
+    </header>
+
+
+
+
+<div id=page_title>
+  <h1>HMTL5 Video Tag Builder</h1>
+  <p>Customize your video tag for the Video.js embed code.</p>
+</div>
+
+<div class=container>
+
+  <div id=tb_settings class=clearfix>
+
+    <div id=tb_basic class=tb-option-section>
+
+      <h3>Basic Options</h3>
+      <div class=tb-option-group>
+        <div class=option-pair>
+          <label>ID</label>
+          <input id=tb_id class=tb-text type=text value="">
+        </div>
+        <div id=tb_width_height_pair class=option-pair>
+          <label>Width x Height (in pixels)</label>
+          <input id=tb_width class=tb-text type=text value="">
+          x <input id=tb_height class=tb-text type=text value="">
+        </div>
+        <div class=option-pair>
+          <label>Poster Image</label>
+          <input id=tb_poster class=tb-text type=text value="">
+        </div>
+        <div class=option-pair>
+          <label>Preload</label>
+          <select id=tb_preload>
+            <option value=auto>Auto</option>
+            <option value=metadata>Metadata</option>
+            <option value=none>none</option>
+          </select>
+        </div>
+        
+        <div class=option-pair><label><input id=tb_controls type=checkbox value=1> Controls</label></div>
+        <div class=option-pair><label><input id=tb_autoplay type=checkbox value=1> Autoplay</label></div>
+        <div class=option-pair><label><input id=tb_loop type=checkbox value=1> Loop</label></div>
+        
+
+      </div>
+    </div>
+    
+    <div id=tb_advanced class=tb-option-section>
+
+      <h3>Advanced Options</h3>
+      <div class=tb-option-group>
+
+        <label>Initialization (setup) Method</label>
+        <p><input type=radio name=tb_setup value=auto> <strong>Auto</strong> - Automatically set up the player on page load, reading any additional options (in JSON format) from the data-setup attribute.</p>
+        <p><input type=radio name=tb_setup value=manual> <strong>Manual</strong> - Use this in situations where the video tag may be added to the HTML or un-hidden some time after the page is loaded (ajax sites, lightboxes). Run the javascript in the embed code’s script tag after the video tag is added or visible for the first time.</p>
+
+        
+
+      </div>
+    </div>
+
+    <div id=tb_sources class=tb-option-section>
+
+      <h3>Sources</h3>
+      <p>Sources are used to provide alternative versions of the same video. A single MP4 file is all that's required, but additional WebM and Ogg versions will allow more users to watch your video using HTML5.</p>
+
+      <div class=tb-option-group class=clearfix>
+        <div class="tb-option-group-labels clearfix">
+          <label id=tb_source_type_label>Type</label><label id=tb_source_src_label>Source URL</label>
+        </div>
+
+        <button id=add_source class=add-button type=button>Add Source</button>
+
+      </div>
+    </div>
+
+    <div id=tb_tracks class=tb-option-section>
+
+      <h3>Tracks</h3>
+      <p>Tracks are used to provide timed text including captions, subtitles, descriptions, and chapters. <a href="../docs/tracks/index.html">Learn more.</a> <strong>Text files on a different server than the page aren't supported yet, i.e. your own files won't work in the test below but will on your own site.</strong></p>
+
+      <div class=tb-option-group>
+
+        <div class="tb-option-group-labels clearfix">
+          <label id=tb_track_kind_label>Kind</label><label id=tb_track_src_label>Source URL</label><label id=tb_track_srclang_label>Language</label>
+        </div>
+
+        <button id=add_track class=add-button type=button>Add Track</button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id=tb_result_box class=highlight>
+    <pre><code class="html" id="tb_result"></code></pre>
+  </div>
+
+  <a id=test_button class=special-button href="#">TEST</a>
+
+  <div id=player_box>
+    
+  </div>
+
+</div>
+
+
+    <footer>
+      <div class=container>
+
+        <div class=footerbox>
+            <h2>What is Video.js?</h2>
+            <p>Video.js is a free <a href="../index.html">HTML5 video player</a> created and open-sourced by Steve Heffernan and <a href="http://zencoder.com/">Zencoder Inc</a>.</p>
+          </div>
+
+          <div id=links class=footerbox>
+            <h2>Latest</h2>
+            <ul id=recentPosts></ul>
+          </div>
+          <div id=links2 class=footerbox>
+            <h2>Support</h2>
+            <ul>
+              <li><a href="http://blog.videojs.com/">Blog</a></li>
+              <li><a href="../docs/index.html">Docs</a></li>
+              <li><a href="../../stackoverflow.com/questions/tagged/video.html" target=_blank>Help</a></li>
+              
+              <li><a href="../docs/skins/index.html">Skins</a></li>
+            </ul>
+          </div>
+
+          <div id=social class=footerbox>
+            <h2>Show Some Love</h2>
+            <p><a href="https://twitter.com/share"  style="margin: 0; padding: 0;" class=twitter-share-button data-url="../index.html">Tweet</a>
+            <script>!function(e,a,f){var c,b=e.getElementsByTagName(a)[0];if(!e.getElementById(f)){c=e.createElement(a);c.id=f;c.src="../../platform.twitter.com/widgets.js";b.parentNode.insertBefore(c,b)}}(document,"script","twitter-wjs");</script></p>
+            
+            <p><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fvideojs.com&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=250293748325508" scrolling=no frameborder=0 style="border:none; margin: 0px; overflow:hidden; width:110px; height:21px;" allowTransparency=true></iframe></p>
+            
+            <p><div class=g-plusone data-size=small data-href="../index.html"></div></p>
+            
+            <p><a id=email_signup target=_blank href="http://eepurl.com/hYEtg"></a></p>
+          </div>
+      
+      </div>
+
+    </footer>
+
+
+  
+
+  
+  <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery||document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>');</script>
+
+  <script defer src='../js/353986f.js'></script>
+  
+
+  
+  
+  <script>window._gaq=[["_setAccount","UA-16505296-1"],["_trackPageview"],["_trackPageLoadTime"]];Modernizr.load({load:("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js"});</script>
+  
+
+  
+  <div id=fb-root></div>
+  <script>(function(e,a,f){var c,b=e.getElementsByTagName(a)[0];if(e.getElementById(f)){return}c=e.createElement(a);c.id=f;c.src="../../connect.facebook.net/en_GB/all.js#xfbml=1&appId=250293748325508";b.parentNode.insertBefore(c,b)}(document,"script","facebook-jssdk"));</script>
+
+  
+  <script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="../../apis.google.com/js/plusone.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+
+  <script type='text/javascript' src='http://blog.videojs.com/api/read/json'></script>
+  <script type='text/javascript'>var recent_posts_count=3;var tumblr_api_read=tumblr_api_read||null;if(tumblr_api_read!=null){var recentPostsHtml="";for(var i=0;i<recent_posts_count;i++){if(tumblr_api_read.posts[i]){var url=tumblr_api_read.posts[i].url;var title=tumblr_api_read.posts[i]["regular-title"];recentPostsHtml+="<li><a href='"+url+"'>"+title+"</a></li>"}}$("#recentPosts").append(recentPostsHtml)};</script>
+
+</body>
+
+<!-- Mirrored from videojs.com/tag-builder/ by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 31 Mar 2013 02:15:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>
